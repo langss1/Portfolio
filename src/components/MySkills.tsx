@@ -40,7 +40,7 @@ export default function MySkills() {
                     <div>
                         <ScrollScale className="text-left">
                             <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">
-                                <span className="text-black">Projects &</span> <span className="text-blue-600">Skills</span>
+                                <span className="text-black">Projects</span> <span className="text-blue-600">& Skills</span>
                             </h2>
                             <p className="text-slate-500 max-w-md text-sm md:text-base leading-relaxed">
                                 Here are some projects that I have made in IoT, AI, Web development, Application, Click on any project content to explore the code.
@@ -77,12 +77,102 @@ export default function MySkills() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <AnimatePresence mode="popLayout">
                         {filteredProjects.map((project, idx) => (
-                            <ProjectCard
+                            <motion.div
                                 key={project.id}
-                                project={project}
-                                idx={idx}
-                                setHoveredProject={setHoveredProject}
-                            />
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.4, delay: idx * 0.05, ease: "backOut" }}
+                                onMouseEnter={() => setHoveredProject(project.id)}
+                                onMouseLeave={() => setHoveredProject(null)}
+                                onClick={() => project.githubUrl && window.open(project.githubUrl, '_blank')}
+                                layout
+                                className="group relative bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:scale-[1.02] transition-all duration-300 flex flex-col h-full overflow-hidden cursor-pointer"
+                            >
+                                {/* Project Image */}
+                                <div className="aspect-video w-full bg-slate-50 relative overflow-hidden border-b border-slate-50">
+                                    <img
+                                        src={project.image || "/Portfolio/placeholder-project.jpg"}
+                                        alt={project.title}
+                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    />
+
+                                    {/* Overlay Actions (Visible on Hover/Mobile) */}
+                                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                                        {project.githubUrl && (
+                                            <div
+                                                onClick={(e) => { e.stopPropagation(); window.open(project.githubUrl || "", '_blank'); }}
+                                                className="w-14 h-14 bg-white text-slate-900 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer"
+                                                title="View Code"
+                                            >
+                                                <Github className="w-7 h-7" />
+                                            </div>
+                                        )}
+
+                                        {/* Web Button (Only for Web projects) */}
+                                        {project.categories.includes("Web") && project.demoUrl && (
+                                            <div
+                                                onClick={(e) => { e.stopPropagation(); window.open(project.demoUrl || "", '_blank'); }}
+                                                className="w-14 h-14 bg-white text-slate-900 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer"
+                                                title="Visit Website"
+                                            >
+                                                <Globe className="w-7 h-7" />
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+
+                                <div className="p-6 flex flex-col flex-1">
+                                    {/* Category Badge */}
+                                    <div className="flex justify-between items-start mb-4">
+                                        <div className="flex gap-2 flex-wrap">
+                                            {project.categories.map((cat) => (
+                                                <span key={cat} className={`
+                                                    bg-slate-50 border border-slate-200 text-slate-500
+                                                    px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider
+                                                `}>
+                                                    {ORBIT_CATEGORIES.find(c => c.id === cat)?.label || cat}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* Title & Desc */}
+                                    <div className="mb-6 flex-1">
+                                        {/* Award Badge (Moved Here) */}
+                                        {project.award && (
+                                            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-amber-50 text-amber-900 border border-amber-200 rounded-md text-[10px] font-bold uppercase tracking-wider mb-3">
+                                                <span className="text-amber-500">🏆</span> {project.award}
+                                            </div>
+                                        )}
+
+                                        <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+                                            {project.title}
+                                        </h3>
+                                        <p className="text-slate-500 text-sm leading-relaxed line-clamp-3">
+                                            {project.description}
+                                        </p>
+                                    </div>
+
+                                    {/* Tech Stack Divider */}
+                                    <div className="w-full h-px bg-slate-100 mb-4" />
+
+                                    {/* Tech Stack Tags */}
+                                    <div>
+                                        <div className="flex flex-wrap gap-2">
+                                            {project.techStack.slice(0, 4).map((tech) => (
+                                                <span
+                                                    key={tech}
+                                                    className="px-2 py-1 bg-slate-50 text-slate-600 rounded-md text-[10px] font-bold border border-slate-100 flex items-center gap-1 hover:bg-slate-100 transition-colors cursor-default"
+                                                >
+                                                    {tech}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </motion.div>
                         ))}
                     </AnimatePresence>
                 </div>
@@ -96,118 +186,5 @@ export default function MySkills() {
 
             </div>
         </section>
-    );
-}
-
-function ProjectCard({ project, idx, setHoveredProject }: { project: any, idx: number, setHoveredProject: any }) {
-    const [isLoading, setIsLoading] = useState(true);
-
-    return (
-        <motion.div
-            layout
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-50px" }}
-            exit={{ opacity: 0, scale: 0.8, transition: { duration: 0.2 } }}
-            transition={{
-                duration: 0.4,
-                delay: idx * 0.05,
-                ease: "backOut"
-            }}
-            onMouseEnter={() => setHoveredProject(project.id)}
-            onMouseLeave={() => setHoveredProject(null)}
-            onClick={() => project.githubUrl && window.open(project.githubUrl, '_blank')}
-            className="group relative bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:scale-[1.02] transition-all duration-300 flex flex-col h-full overflow-hidden cursor-pointer"
-        >
-            {/* Project Image */}
-            <div className="aspect-video w-full bg-slate-50 relative overflow-hidden border-b border-slate-50">
-                {isLoading && (
-                    <div className="absolute inset-0 flex items-center justify-center bg-slate-100 z-10">
-                        <div className="w-8 h-8 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin" />
-                    </div>
-                )}
-                <img
-                    src={project.image || "/Portfolio/placeholder-project.jpg"}
-                    alt={project.title}
-                    onLoad={() => setIsLoading(false)}
-                    className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
-                />
-
-                {/* Overlay Actions (Visible on Hover/Mobile) */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                    {project.githubUrl && (
-                        <div
-                            onClick={(e) => { e.stopPropagation(); window.open(project.githubUrl || "", '_blank'); }}
-                            className="w-14 h-14 bg-white text-slate-900 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer"
-                            title="View Code"
-                        >
-                            <Github className="w-7 h-7" />
-                        </div>
-                    )}
-
-                    {/* Web Button (Only for Web projects) */}
-                    {project.categories.includes("Web") && project.demoUrl && (
-                        <div
-                            onClick={(e) => { e.stopPropagation(); window.open(project.demoUrl || "", '_blank'); }}
-                            className="w-14 h-14 bg-white text-slate-900 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer"
-                            title="Visit Website"
-                        >
-                            <Globe className="w-7 h-7" />
-                        </div>
-                    )}
-                </div>
-            </div>
-
-            <div className="p-6 flex flex-col flex-1">
-                {/* Category Badge */}
-                <div className="flex justify-between items-start mb-4">
-                    <div className="flex gap-2 flex-wrap">
-                        {project.categories.map((cat: string) => (
-                            <span key={cat} className={`
-                                bg-slate-50 border border-slate-200 text-slate-500
-                                px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider
-                            `}>
-                                {ORBIT_CATEGORIES.find(c => c.id === cat)?.label || cat}
-                            </span>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Title & Desc */}
-                <div className="mb-6 flex-1">
-                    {/* Award Badge (Moved Here) */}
-                    {project.award && (
-                        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-amber-50 text-amber-900 border border-amber-200 rounded-md text-[10px] font-bold uppercase tracking-wider mb-3">
-                            <span className="text-amber-500">🏆</span> {project.award}
-                        </div>
-                    )}
-
-                    <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
-                        {project.title}
-                    </h3>
-                    <p className="text-slate-500 text-sm leading-relaxed line-clamp-3">
-                        {project.description}
-                    </p>
-                </div>
-
-                {/* Tech Stack Divider */}
-                <div className="w-full h-px bg-slate-100 mb-4" />
-
-                {/* Tech Stack Tags */}
-                <div>
-                    <div className="flex flex-wrap gap-2">
-                        {project.techStack.slice(0, 4).map((tech: string) => (
-                            <span
-                                key={tech}
-                                className="px-2 py-1 bg-slate-50 text-slate-600 rounded-md text-[10px] font-bold border border-slate-100 flex items-center gap-1 hover:bg-slate-100 transition-colors cursor-default"
-                            >
-                                {tech}
-                            </span>
-                        ))}
-                    </div>
-                </div>
-            </div>
-
-        </motion.div>
     );
 }

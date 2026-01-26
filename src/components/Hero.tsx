@@ -49,14 +49,11 @@ export default function Hero() {
                     100% { background-position: 0% 50%; }
                 }
                 @keyframes borderColorCycle {
-                    0% { border-color: #3b82f6; } 
-                    25% { border-color: #8b5cf6; } 
-                    50% { border-color: #ec4899; } 
-                    75% { border-color: #3b82f6; } 
-                    100% { border-color: #3b82f6; } 
+                    0% { border-color: #93c5fd; } 
+                    50% { border-color: #1e3a8a; } 
+                    100% { border-color: #93c5fd; } 
                 }
             `}</style>
-
 
             <div className="absolute top-[-20%] right-[-10%] w-[60vh] h-[60vh] bg-blue-50/60 rounded-full blur-[120px] pointer-events-none" />
 
@@ -78,7 +75,7 @@ export default function Hero() {
                             transition={{ duration: 0.5 }}
                             className="relative w-28 h-28 md:w-40 md:h-40 rounded-3xl overflow-hidden border-[4px] shadow-2xl shadow-blue-900/10"
                             style={{
-                                animation: "borderColorCycle 4s linear infinite",
+                                animation: "borderColorCycle 3s ease-in-out infinite",
                                 padding: 0
                             }}
                         >
@@ -225,7 +222,7 @@ export default function Hero() {
                 </motion.div>
 
             </div>
-        </section >
+        </section>
     );
 }
 

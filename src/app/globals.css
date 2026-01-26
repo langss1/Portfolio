@@ -7,10 +7,6 @@
   /* Slate 900 */
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
