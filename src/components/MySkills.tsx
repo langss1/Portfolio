@@ -40,7 +40,7 @@ export default function MySkills() {
                     <div>
                         <ScrollScale className="text-left">
                             <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">
-                                <span className="text-black">Projects</span> <span className="text-blue-600">& Skills</span>
+                                <span className="text-black">Projects &</span> <span className="text-blue-600">Skills</span>
                             </h2>
                             <p className="text-slate-500 max-w-md text-sm md:text-base leading-relaxed">
                                 Here are some projects that I have made in IoT, AI, Web development, Application, Click on any project content to explore the code.
@@ -79,14 +79,19 @@ export default function MySkills() {
                         {filteredProjects.map((project, idx) => (
                             <motion.div
                                 key={project.id}
+                                layout
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.4, delay: idx * 0.05, ease: "backOut" }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                exit={{ opacity: 0, scale: 0.8, transition: { duration: 0.2 } }}
+                                transition={{
+                                    duration: 0.8,
+                                    delay: idx * 0.1,
+                                    ease: [0.16, 1, 0.3, 1]
+                                }}
                                 onMouseEnter={() => setHoveredProject(project.id)}
                                 onMouseLeave={() => setHoveredProject(null)}
                                 onClick={() => project.githubUrl && window.open(project.githubUrl, '_blank')}
-                                layout
                                 className="group relative bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:scale-[1.02] transition-all duration-300 flex flex-col h-full overflow-hidden cursor-pointer"
                             >
                                 {/* Project Image */}
