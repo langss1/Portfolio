@@ -71,8 +71,8 @@ export default function Hero() {
                         className="relative shrink-0"
                     >
                         <motion.div
-                            animate={{ y: [0, -10, 0] }}
-                            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.5 }}
                             className="relative w-28 h-28 md:w-40 md:h-40 rounded-3xl overflow-hidden border-[4px] shadow-2xl shadow-blue-900/10"
                             style={{
                                 animation: "borderColorCycle 3s ease-in-out infinite",

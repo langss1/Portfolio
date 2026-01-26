@@ -40,7 +40,7 @@ export default function MySkills() {
                     <div>
                         <ScrollScale className="text-left">
                             <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">
-                                <span style={gradientStyle} className="bg-clip-text text-transparent">Projects & Skills</span>
+                                <span className="text-black">Projects</span> <span className="text-blue-600">& Skills</span>
                             </h2>
                             <p className="text-slate-500 max-w-md text-sm md:text-base leading-relaxed">
                                 Here are some projects that I have made in IoT, AI, Web development, Application, Click on any project content to explore the code.
@@ -86,6 +86,7 @@ export default function MySkills() {
                                 onMouseEnter={() => setHoveredProject(project.id)}
                                 onMouseLeave={() => setHoveredProject(null)}
                                 onClick={() => project.githubUrl && window.open(project.githubUrl, '_blank')}
+                                layout
                                 className="group relative bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:scale-[1.02] transition-all duration-300 flex flex-col h-full overflow-hidden cursor-pointer"
                             >
                                 {/* Project Image */}
