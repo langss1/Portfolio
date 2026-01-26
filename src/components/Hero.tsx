@@ -42,6 +42,7 @@ export default function Hero() {
     return (
         <section className="min-h-[85vh] flex flex-col justify-center px-5 md:px-8 py-20 bg-white relative overflow-hidden">
 
+            <style jsx>{`
                 @keyframes shine {
                     0% { background-position: 0% 50%; }
                     50% { background-position: 100% 50%; }
