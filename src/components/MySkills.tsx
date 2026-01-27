@@ -93,7 +93,7 @@ export default function MySkills() {
                                 {/* Project Image */}
                                 <div className="aspect-video w-full bg-slate-50 relative overflow-hidden border-b border-slate-50">
                                     <ImageWithLoader
-                                        src={project.image || "/Portfolio/placeholder-project.jpg"}
+                                        src={project.image || "/Portfolio/placeholder-project.svg"}
                                         alt={project.title}
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                     />

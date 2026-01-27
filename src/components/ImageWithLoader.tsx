@@ -17,7 +17,7 @@ export default function ImageWithLoader({
     src,
     alt,
     className = "",
-    fallbackSrc = "/Portfolio/placeholder-project.jpg",
+    fallbackSrc = "/Portfolio/placeholder-project.svg",
     priority = false
 }: ImageWithLoaderProps) {
     const [isLoading, setIsLoading] = useState(true);
@@ -33,11 +33,12 @@ export default function ImageWithLoader({
 
     const handleError = () => {
         setIsLoading(false);
-        setHasError(true);
-        // If the main src fails, we might want to try the fallback or just keep showing the error state
-        // For now, let's switch to fallback if provided and different
+        // Only switch to fallback if we aren't already there to avoid loop
         if (currentSrc !== fallbackSrc) {
+            setHasError(false); // Reset error temporarily while we try fallback
             setCurrentSrc(fallbackSrc);
+        } else {
+            setHasError(true); // Fallback also failed
         }
     };
 
