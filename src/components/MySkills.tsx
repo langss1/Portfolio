@@ -27,7 +27,7 @@ export default function MySkills() {
         : PROJECTS.filter(p => p.categories.includes(activeTab));
 
     return (
-        <section id="projects" className="py-24 bg-slate-50 relative min-h-screen flex flex-col">
+        <section id="projects" className="py-24 bg-slate-50 relative min-h-screen flex flex-col overflow-hidden">
 
             {/* Background Decorations */}
             <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-white to-slate-50 pointer-events-none" />
