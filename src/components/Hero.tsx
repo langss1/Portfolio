@@ -76,7 +76,8 @@ export default function Hero() {
                             transition={{ duration: 0.5 }}
                             className="relative w-28 h-28 md:w-40 md:h-40 rounded-3xl overflow-hidden border-[4px] shadow-2xl shadow-blue-900/10"
                             style={{
-                                animation: "borderColorCycle 3s ease-in-out infinite",
+                                // animation: "borderColorCycle 3s ease-in-out infinite", // REMOVED
+                                borderImage: "linear-gradient(to right, #60a5fa, #2563eb) 1",
                                 padding: 0
                             }}
                         >
