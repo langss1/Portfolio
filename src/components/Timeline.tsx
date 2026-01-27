@@ -26,7 +26,7 @@ export default function Timeline() {
                         }} className="bg-clip-text text-transparent">Organization</span>
                     </h2>
                     <p className="text-slate-500 max-w-md text-sm md:text-base leading-relaxed">
-                        Professional journey and organizational leadership roles.
+                        my organizational experience to upgrade my soft skill teamwork, communication, leadership and anymore
                     </p>
                 </ScrollScale>
 

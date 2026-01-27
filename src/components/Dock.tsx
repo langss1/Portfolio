@@ -1,6 +1,6 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
-import { Linkedin, Github, Mail, Download, Menu, Instagram } from "lucide-react";
+import { Linkedin, Github, Mail, Download, Menu, Instagram, FileText } from "lucide-react";
 import { PROFILE } from "@/data/portfolio";
 import { useState, useEffect } from "react";
 
@@ -69,7 +69,7 @@ export default function Dock() {
                                 target="_blank"
                                 className="flex items-center gap-2 bg-slate-900 text-white px-4 py-2.5 rounded-xl font-bold text-sm hover:bg-black transition-colors"
                             >
-                                CV <Download size={16} />
+                                CV <FileText size={16} />
                             </a>
                         </div>
                     </motion.div>
