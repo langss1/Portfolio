@@ -1,6 +1,6 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
-import { Linkedin, Github, Mail, Download, Menu } from "lucide-react";
+import { Linkedin, Github, Mail, Download, Menu, Instagram } from "lucide-react";
 import { PROFILE } from "@/data/portfolio";
 import { useState, useEffect } from "react";
 
@@ -50,21 +50,16 @@ export default function Dock() {
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: 100, opacity: 0 }}
                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                        className="flex items-center gap-4 w-full max-w-md justify-between"
+                        className="flex items-center gap-4 w-full max-w-md justify-center"
                     >
                         {/* Floating Action Button (Left) - "N" or Menu */}
-                        <motion.button
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                            className="pointer-events-auto w-12 h-12 bg-slate-800 text-white rounded-full flex items-center justify-center shadow-xl border border-slate-700"
-                        >
-                            <span className="font-bold text-lg">G</span>
-                        </motion.button>
+                        {/* Floating Action Button (Left) - "N" or Menu - REMOVED */}
 
                         {/* Main Dock (Right) */}
                         <div className="pointer-events-auto flex items-center gap-2 p-2 bg-white/80 backdrop-blur-md border border-white/50 rounded-2xl shadow-2xl">
                             <SocialIcon href={PROFILE.socials.linkedin} icon={<Linkedin size={20} />} label="LinkedIn" />
                             <SocialIcon href={PROFILE.socials.github} icon={<Github size={20} />} label="Github" />
+                            <SocialIcon href="https://www.instagram.com/gilangwasis/" icon={<Instagram size={20} />} label="Instagram" />
                             <SocialIcon href={PROFILE.socials.email} icon={<Mail size={20} />} label="Email" />
 
                             <div className="w-px h-6 bg-slate-200 mx-1" />

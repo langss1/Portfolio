@@ -51,7 +51,7 @@ export default function Contact() {
                                 I am always open to new opportunities, collaborations, let's connect and make an impact.
                             </p>
 
-                            <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+                            <div className="flex flex-wrap justify-center gap-3 md:gap-4 max-w-[220px] md:max-w-none mx-auto">
                                 <a
                                     href="mailto:gilangwasis2@gmail.com"
                                     className="flex items-center justify-center bg-white text-slate-900 w-12 h-12 md:w-14 md:h-14 rounded-full font-bold hover:bg-blue-50 transition-all active:scale-95 shadow-lg group-hover:shadow-white/20"
