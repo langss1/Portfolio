@@ -60,7 +60,7 @@ export default function Contact() {
                                     <Mail className="w-6 h-6" />
                                 </a>
                                 <a
-                                    href="https://www.linkedin.com/in/gilang-wasis-wicaksono2/"
+                                    href="https://www.linkedin.com/in/gilang-wasis-wicaksono2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center justify-center bg-[#0077b5] text-white w-12 h-12 md:w-14 md:h-14 rounded-full font-bold hover:bg-[#006396] transition-all active:scale-95 shadow-lg group-hover:shadow-white/20"

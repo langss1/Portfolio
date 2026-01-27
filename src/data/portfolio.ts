@@ -8,7 +8,7 @@ export const PROFILE = {
     roles: ["AI Engineer", "IoT Specialist", "Cyber Threat Analyst", "Fullstack Developer"],
     cvLink: "/Portfolio/files/CV_Gilang_Wasis.pdf",
     socials: {
-        linkedin: "https://www.linkedin.com/in/gilang-wasis-wicaksono2/",
+        linkedin: "https://www.linkedin.com/in/gilang-wasis-wicaksono2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         github: "https://github.com/langss1",
         email: "mailto:gilangwasis2@gmail.com"
     }
