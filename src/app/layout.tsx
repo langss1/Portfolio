@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Gilang Wasis Wicaksono | IT Student Portfolio",
+  title: "Gilang | IT student portfolio",
   description: "Portfolio of Gilang Wasis Wicaksono - AI Engineer, IoT Specialist, Cyber Security Analyst, and Fullstack Developer. Telkom University Student specializing in future-tech solutions.",
 };
 

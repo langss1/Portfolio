@@ -41,7 +41,12 @@ export default function MySkills() {
                     <div>
                         <ScrollScale className="text-left">
                             <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">
-                                <span className="text-black">Projects</span> <span className="text-black">&</span> <span className="text-blue-600">Skills</span>
+                                Projects &<br />
+                                <span style={{
+                                    backgroundImage: 'linear-gradient(to right, #2563eb, #60a5fa, #2563eb)',
+                                    backgroundSize: "200% auto",
+                                    animation: "shine 4s linear infinite"
+                                }} className="bg-clip-text text-transparent">Skills</span>
                             </h2>
                             <p className="text-slate-500 max-w-md text-sm md:text-base leading-relaxed">
                                 Here are some projects that I have made in IoT, AI, Web development, Application, Click on any project content to explore the code.

@@ -10,7 +10,7 @@ export const PROFILE = {
     socials: {
         linkedin: "https://www.linkedin.com/in/gilang-wasis-wicaksono2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         github: "https://github.com/langss1",
-        email: "mailto:gilangwasis2@gmail.com"
+        email: "mailto:cumlodstd@gmail.com"
     }
 };
 
@@ -78,7 +78,7 @@ export const PROJECTS = [
     },
     {
         id: 2,
-        title: "SANI: AI Health Assistant",
+        title: "SANI: Agentic AI Health Assistant",
         categories: ["AI"],
         description: "Agentic AI health assistant built on Qwen LLM. Provides responsive, personalized health info and understands medical context accurately.",
         techStack: ["Qwen LLM", "Python", "AI Agents", "Fine-tuning"],
@@ -119,7 +119,7 @@ export const PROJECTS = [
         title: "MSU Inventory System",
         categories: ["Web"],
         description: "Web-based facility management for Syamsul 'Ulum Mosque. Digitizes asset tracking and manages loan schedules efficiently.",
-        techStack: ["Web", "PHP", "MySQL", "Inventory Mgmt"],
+        techStack: ["Web", "PHP", "MySQL", "Inventory Mgmt", "Laravel", "Bootstrap"],
         githubUrl: "https://github.com/Kruwpuck/Inventaris-MSU-WebPro",
         demoUrl: "https://syamsululum.site/",
         image: "/Portfolio/MSU.png",

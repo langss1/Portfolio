@@ -155,7 +155,7 @@ export default function Hero() {
                                 <motion.span
                                     initial={{ width: 0 }}
                                     animate={{ width: "100%" }}
-                                    transition={{ delay: 1, duration: 0.6, ease: "easeOut" }}
+                                    transition={{ delay: 2, duration: 0.6, ease: "easeOut" }}
                                     className="absolute bottom-1 left-0 h-3 md:h-3.5 bg-yellow-300/80 -z-10 skew-x-[-10deg]"
                                 />
                                 (GPA 3.94 / 4.00)

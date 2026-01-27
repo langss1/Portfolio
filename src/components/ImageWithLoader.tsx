@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Image as ImageIcon, AlertCircle, Loader2 } from "lucide-react";
 
@@ -23,6 +23,8 @@ export default function ImageWithLoader({
     const [isLoading, setIsLoading] = useState(true);
     const [hasError, setHasError] = useState(false);
     const [currentSrc, setCurrentSrc] = useState(src);
+    // Use a ref to check if the image is already loaded (cached)
+    const imgRef = useRef<HTMLImageElement>(null);
 
     useEffect(() => {
         // Reset state when src changes
@@ -30,6 +32,13 @@ export default function ImageWithLoader({
         setHasError(false);
         setCurrentSrc(src);
     }, [src]);
+
+    useEffect(() => {
+        // Check if image is already loaded
+        if (imgRef.current && imgRef.current.complete) {
+            setIsLoading(false);
+        }
+    }, [currentSrc]);
 
     const handleError = () => {
         setIsLoading(false);
@@ -71,6 +80,7 @@ export default function ImageWithLoader({
             )}
 
             <img
+                ref={imgRef}
                 src={currentSrc}
                 alt={alt}
                 className={`${className} ${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-500`}
