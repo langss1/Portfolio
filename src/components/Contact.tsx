@@ -51,10 +51,10 @@ export default function Contact() {
                                 I am always open to new opportunities, collaborations, let's connect and make an impact.
                             </p>
 
-                            <div className="flex flex-nowrap justify-center gap-4">
+                            <div className="flex flex-wrap justify-center gap-3 md:gap-4">
                                 <a
                                     href="mailto:gilangwasis2@gmail.com"
-                                    className="flex items-center justify-center bg-white text-slate-900 w-14 h-14 rounded-full font-bold hover:bg-blue-50 transition-all active:scale-95 shadow-lg group-hover:shadow-white/20"
+                                    className="flex items-center justify-center bg-white text-slate-900 w-12 h-12 md:w-14 md:h-14 rounded-full font-bold hover:bg-blue-50 transition-all active:scale-95 shadow-lg group-hover:shadow-white/20"
                                     title="Email"
                                 >
                                     <Mail className="w-6 h-6" />
@@ -63,7 +63,7 @@ export default function Contact() {
                                     href="https://www.linkedin.com/in/gilang-wasis-wicaksono2/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center justify-center bg-[#0077b5] text-white w-14 h-14 rounded-full font-bold hover:bg-[#006396] transition-all active:scale-95 shadow-lg group-hover:shadow-white/20"
+                                    className="flex items-center justify-center bg-[#0077b5] text-white w-12 h-12 md:w-14 md:h-14 rounded-full font-bold hover:bg-[#006396] transition-all active:scale-95 shadow-lg group-hover:shadow-white/20"
                                     title="LinkedIn"
                                 >
                                     <Linkedin className="w-6 h-6" />
@@ -72,7 +72,7 @@ export default function Contact() {
                                     href="https://github.com/langss1"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center justify-center bg-slate-900 text-white w-14 h-14 rounded-full font-bold hover:bg-slate-800 transition-all active:scale-95 shadow-lg group-hover:shadow-white/20"
+                                    className="flex items-center justify-center bg-slate-900 text-white w-12 h-12 md:w-14 md:h-14 rounded-full font-bold hover:bg-slate-800 transition-all active:scale-95 shadow-lg group-hover:shadow-white/20"
                                     title="GitHub"
                                 >
                                     <Github className="w-6 h-6" />
@@ -81,7 +81,7 @@ export default function Contact() {
                                     href="https://www.instagram.com/gilangwasis/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center justify-center bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white w-14 h-14 rounded-full font-bold hover:opacity-90 transition-all active:scale-95 shadow-lg group-hover:shadow-white/20"
+                                    className="flex items-center justify-center bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white w-12 h-12 md:w-14 md:h-14 rounded-full font-bold hover:opacity-90 transition-all active:scale-95 shadow-lg group-hover:shadow-white/20"
                                     title="Instagram"
                                 >
                                     <Instagram className="w-6 h-6" />
