@@ -6,7 +6,7 @@ import {
 export const PROFILE = {
     name: "Gilang Wasis Wicaksono",
     roles: ["AI Engineer", "IoT Specialist", "Cyber Threat Analyst", "Fullstack Developer"],
-    cvLink: "/files/CV_Gilang_Wasis.pdf",
+    cvLink: "/Portfolio/files/CV_Gilang_Wasis.pdf",
     socials: {
         linkedin: "https://www.linkedin.com/in/gilang-wasis-wicaksono2/",
         github: "https://github.com/langss1",
@@ -73,7 +73,7 @@ export const PROJECTS = [
         techStack: ["Python", "OpenCV", "YOLO", "Computer Vision"],
         githubUrl: "https://github.com/langss1/ComputerVision-Etilang-One-Way",
         demoUrl: null,
-        image: "/ETL.png",
+        image: "/Portfolio/ETL.png",
         year: "2025"
     },
     {
@@ -84,7 +84,7 @@ export const PROJECTS = [
         techStack: ["Qwen LLM", "Python", "AI Agents", "Fine-tuning"],
         githubUrl: "https://github.com/langss1/HealkathonGatjor",
         demoUrl: null,
-        image: "/SANI.png",
+        image: "/Portfolio/SANI.png",
         year: "2025"
     },
     {
@@ -95,7 +95,7 @@ export const PROJECTS = [
         techStack: ["Flutter", "TensorFlow Lite", "Gemini AI", "Dart"],
         githubUrl: "https://github.com/langss1/gardawara",
         demoUrl: null,
-        image: "/Garda.png",
+        image: "/Portfolio/Garda.png",
         year: "2026",
         award: "1st Place Winner Innovation Competition"
     },
@@ -109,7 +109,7 @@ export const PROJECTS = [
         techStack: ["ESP32", "MQTT", "Flutter", "Machine Learning"],
         githubUrl: "https://github.com/langss1/Fire-Guard",
         demoUrl: null,
-        image: "/POST.png",
+        image: "/Portfolio/POST.png",
         year: "2026"
     },
 
@@ -122,7 +122,7 @@ export const PROJECTS = [
         techStack: ["Web", "PHP", "MySQL", "Inventory Mgmt"],
         githubUrl: "https://github.com/Kruwpuck/Inventaris-MSU-WebPro",
         demoUrl: "https://syamsululum.site/",
-        image: "/MSU.png",
+        image: "/Portfolio/MSU.png",
         year: "2025"
     },
     {
@@ -133,7 +133,7 @@ export const PROJECTS = [
         techStack: ["Web Design", "HTML/CSS", "Distribution"],
         githubUrl: "https://github.com/langss1/web-garda",
         demoUrl: "https://gardawara.site/",
-        image: "/gardasite.png",
+        image: "/Portfolio/gardasite.png",
         year: "2026"
     },
     {
@@ -144,7 +144,7 @@ export const PROJECTS = [
         techStack: ["Android", "Java/Kotlin", "Fintech", "Mobile"],
         githubUrl: "https://github.com/langss1/Road-to-Victory_Agrivest",
         demoUrl: null,
-        image: "/agrivest.png",
+        image: "/Portfolio/agrivest.png",
         year: "2025",
         award: "Finalist Hackathon"
     }
