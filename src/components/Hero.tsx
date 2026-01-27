@@ -3,6 +3,7 @@ import { motion, AnimatePresence, Variants } from "framer-motion";
 import { useEffect, useState } from "react";
 import { PROFILE } from "@/data/portfolio";
 import { ChevronRight, Download, Linkedin, Github, Terminal, Smartphone, PenTool, Shield, Cpu, Code2 } from "lucide-react";
+import ImageWithLoader from "./ImageWithLoader";
 
 // ANIMASI GRADIENT
 const gradientStyle = {
@@ -79,7 +80,12 @@ export default function Hero() {
                                 padding: 0
                             }}
                         >
-                            <img src="/Portfolio/Profil.jpeg" alt="Gilang Wasis" className="w-full h-full object-cover" />
+                            <ImageWithLoader
+                                src="/Portfolio/Profil.jpeg"
+                                alt="Gilang Wasis"
+                                className="w-full h-full object-cover"
+                                priority
+                            />
                         </motion.div>
 
                         {/* Wiggle Icon */}

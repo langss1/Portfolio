@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ORBIT_CATEGORIES, PROJECTS } from "@/data/portfolio";
 import { ArrowUpRight, Github, Code2, Globe } from "lucide-react";
 import ScrollScale from "./ScrollScale";
+import ImageWithLoader from "./ImageWithLoader";
 
 // Animasi Gradient
 const gradientStyle = {
@@ -91,7 +92,7 @@ export default function MySkills() {
                             >
                                 {/* Project Image */}
                                 <div className="aspect-video w-full bg-slate-50 relative overflow-hidden border-b border-slate-50">
-                                    <img
+                                    <ImageWithLoader
                                         src={project.image || "/Portfolio/placeholder-project.jpg"}
                                         alt={project.title}
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
