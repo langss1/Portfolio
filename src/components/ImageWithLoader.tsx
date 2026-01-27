@@ -17,7 +17,7 @@ export default function ImageWithLoader({
     src,
     alt,
     className = "",
-    fallbackSrc = "/Portfolio/placeholder-project.svg",
+    fallbackSrc = "/placeholder-project.svg",
     priority = false
 }: ImageWithLoaderProps) {
     const [isLoading, setIsLoading] = useState(true);
@@ -38,6 +38,13 @@ export default function ImageWithLoader({
         if (imgRef.current && imgRef.current.complete) {
             setIsLoading(false);
         }
+
+        // Safety timeout to prevent infinite loading
+        const timer = setTimeout(() => {
+            setIsLoading(false);
+        }, 5000);
+
+        return () => clearTimeout(timer);
     }, [currentSrc]);
 
     const handleError = () => {

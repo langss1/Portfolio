@@ -6,7 +6,7 @@ import {
 export const PROFILE = {
     name: "Gilang Wasis Wicaksono",
     roles: ["AI Engineer", "IoT Specialist", "Cyber Threat Analyst", "Fullstack Developer"],
-    cvLink: "/Portfolio/files/CV_Gilang_Wasis.pdf",
+    cvLink: "/files/CV_Gilang_Wasis.pdf",
     socials: {
         linkedin: "https://www.linkedin.com/in/gilang-wasis-wicaksono2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         github: "https://github.com/langss1",
@@ -73,7 +73,7 @@ export const PROJECTS = [
         techStack: ["Python", "OpenCV", "YOLO", "Computer Vision"],
         githubUrl: "https://github.com/langss1/ComputerVision-Etilang-One-Way",
         demoUrl: null,
-        image: "/Portfolio/ETL.png",
+        image: "/ETL.png",
         year: "2025"
     },
     {
@@ -84,7 +84,7 @@ export const PROJECTS = [
         techStack: ["Qwen LLM", "Python", "AI Agents", "Fine-tuning"],
         githubUrl: "https://github.com/langss1/HealkathonGatjor",
         demoUrl: null,
-        image: "/Portfolio/SANI.png",
+        image: "/SANI.png",
         year: "2025"
     },
     {
@@ -95,7 +95,7 @@ export const PROJECTS = [
         techStack: ["Flutter", "TensorFlow Lite", "Gemini AI", "Dart"],
         githubUrl: "https://github.com/langss1/gardawara",
         demoUrl: null,
-        image: "/Portfolio/Garda.png",
+        image: "/Garda.png",
         year: "2026",
         award: "1st Place Winner Innovation Competition"
     },
@@ -109,7 +109,7 @@ export const PROJECTS = [
         techStack: ["ESP32", "MQTT", "Flutter", "Machine Learning"],
         githubUrl: "https://github.com/langss1/Fire-Guard",
         demoUrl: null,
-        image: "/Portfolio/POST.png",
+        image: "/POST.png",
         year: "2026"
     },
 
@@ -122,7 +122,7 @@ export const PROJECTS = [
         techStack: ["Web", "PHP", "MySQL", "Inventory Mgmt", "Laravel", "Bootstrap"],
         githubUrl: "https://github.com/Kruwpuck/Inventaris-MSU-WebPro",
         demoUrl: "https://syamsululum.site/",
-        image: "/Portfolio/MSU.png",
+        image: "/MSU.png",
         year: "2025"
     },
     {
@@ -133,7 +133,7 @@ export const PROJECTS = [
         techStack: ["Web Design", "HTML/CSS", "Distribution"],
         githubUrl: "https://github.com/langss1/web-garda",
         demoUrl: "https://gardawara.site/",
-        image: "/Portfolio/gardasite.png",
+        image: "/gardasite.png",
         year: "2026"
     },
     {
@@ -144,7 +144,7 @@ export const PROJECTS = [
         techStack: ["Android", "Java/Kotlin", "Fintech", "Mobile"],
         githubUrl: "https://github.com/langss1/Road-to-Victory_Agrivest",
         demoUrl: null,
-        image: "/Portfolio/agrivest.png",
+        image: "/agrivest.png",
         year: "2025",
         award: "Finalist Hackathon"
     }
