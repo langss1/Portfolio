@@ -90,7 +90,7 @@ export default function Contact() {
                                     href="/Portfolio/files/CV_Gilang_Wasis.pdf"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center justify-center bg-slate-700 text-white w-14 h-14 rounded-full font-bold hover:bg-slate-600 transition-all active:scale-95 shadow-lg group-hover:shadow-white/20 ring-1 ring-white/10"
+                                    className="flex items-center justify-center bg-slate-700 text-white w-12 h-12 md:w-14 md:h-14 rounded-full font-bold hover:bg-slate-600 transition-all active:scale-95 shadow-lg group-hover:shadow-white/20 ring-1 ring-white/10"
                                     title="Download CV"
                                 >
                                     <FileText className="w-6 h-6" />
