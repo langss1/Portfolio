@@ -74,19 +74,16 @@ export default function Hero() {
                         <motion.div
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.5 }}
-                            className="relative w-28 h-28 md:w-40 md:h-40 rounded-3xl overflow-hidden border-[4px] shadow-2xl shadow-blue-900/10"
-                            style={{
-                                // animation: "borderColorCycle 3s ease-in-out infinite", // REMOVED
-                                borderImage: "linear-gradient(to right, #60a5fa, #2563eb) 1",
-                                padding: 0
-                            }}
+                            className="relative w-28 h-28 md:w-40 md:h-40 rounded-3xl overflow-hidden shadow-2xl shadow-blue-900/10 p-[4px] bg-gradient-to-r from-blue-400 to-blue-700"
                         >
-                            <ImageWithLoader
-                                src="/Portfolio/Profil.jpeg"
-                                alt="Gilang Wasis"
-                                className="w-full h-full object-cover"
-                                priority
-                            />
+                            <div className="w-full h-full rounded-[calc(1.5rem-4px)] overflow-hidden bg-white">
+                                <ImageWithLoader
+                                    src="/Portfolio/Profil.jpeg"
+                                    alt="Gilang Wasis"
+                                    className="w-full h-full object-cover"
+                                    priority
+                                />
+                            </div>
                         </motion.div>
 
                         {/* Wiggle Icon */}

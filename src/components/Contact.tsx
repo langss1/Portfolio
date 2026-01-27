@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import ScrollScale from "./ScrollScale";
-import { Mail, Linkedin, Instagram, FileText } from "lucide-react";
+import { Mail, Linkedin, Instagram, FileText, Github } from "lucide-react";
 
 export default function Contact() {
     return (
@@ -67,6 +67,15 @@ export default function Contact() {
                                     title="LinkedIn"
                                 >
                                     <Linkedin className="w-6 h-6" />
+                                </a>
+                                <a
+                                    href="https://github.com/langss1"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center justify-center bg-slate-900 text-white w-14 h-14 rounded-full font-bold hover:bg-slate-800 transition-all active:scale-95 shadow-lg group-hover:shadow-white/20"
+                                    title="GitHub"
+                                >
+                                    <Github className="w-6 h-6" />
                                 </a>
                                 <a
                                     href="https://www.instagram.com/gilangwasis/"
