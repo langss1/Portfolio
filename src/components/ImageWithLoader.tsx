@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Image as ImageIcon, AlertCircle } from "lucide-react";
+import { Image as ImageIcon, AlertCircle, Loader2 } from "lucide-react";
 
 interface ImageWithLoaderProps {
     src: string;
@@ -57,9 +57,7 @@ export default function ImageWithLoader({
                         className="absolute inset-0 bg-slate-200 z-10 flex items-center justify-center"
                     >
                         <div className="flex flex-col items-center gap-2">
-                            {/* Shimmer Effect */}
-                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent w-full h-full animate-shine" />
-                            <ImageIcon className="w-8 h-8 text-slate-400 animate-pulse" />
+                            <Loader2 className="w-8 h-8 text-blue-500 animate-spin" />
                         </div>
                     </motion.div>
                 )}
@@ -80,16 +78,6 @@ export default function ImageWithLoader({
                 onError={handleError}
                 loading={priority ? "eager" : "lazy"}
             />
-
-            <style jsx global>{`
-                @keyframes shine {
-                    0% { transform: translateX(-100%); }
-                    100% { transform: translateX(100%); }
-                }
-                .animate-shine {
-                    animation: shine 1.5s infinite;
-                }
-            `}</style>
         </div>
     );
 }
