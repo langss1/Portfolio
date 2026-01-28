@@ -78,7 +78,7 @@ export default function Hero() {
                         >
                             <div className="w-full h-full rounded-[calc(1.5rem-4px)] overflow-hidden bg-white">
                                 <ImageWithLoader
-                                    src="/Portfolio/Profil.jpeg"
+                                    src="/Profil.jpeg"
                                     alt="Gilang Wasis"
                                     className="w-full h-full object-cover"
                                     priority
