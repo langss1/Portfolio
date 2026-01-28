@@ -39,8 +39,14 @@ export default function Home() {
           <Impact />
           <Contact />
           {/* Footer Copyright */}
-          <footer className="py-8 text-center text-slate-400 text-xs">
+          <footer className="py-8 text-center text-slate-400 text-xs flex flex-col items-center gap-4">
             <p>© 2026 Gilang Wasis Wicaksono. Designed & Built with Next.js.</p>
+            <div className="opacity-80 hover:opacity-100 transition-opacity">
+              <img
+                src="https://komarev.com/ghpvc/?username=langss1-portfolio&label=Views&base=100&style=flat-square&color=blue"
+                alt="Visitor Counter"
+              />
+            </div>
           </footer>
         </>
       )}
