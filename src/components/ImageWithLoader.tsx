@@ -17,7 +17,7 @@ export default function ImageWithLoader({
     src,
     alt,
     className = "",
-    fallbackSrc = "/placeholder-project.svg",
+    fallbackSrc = "/Portfolio/placeholder-project.svg",
     priority = false
 }: ImageWithLoaderProps) {
     const [isLoading, setIsLoading] = useState(true);
