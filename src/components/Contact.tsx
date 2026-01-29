@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import ScrollScale from "./ScrollScale";
+import { PROFILE } from "@/data/portfolio";
 import { Mail, Linkedin, Instagram, FileText, Github } from "lucide-react";
 
 export default function Contact() {
@@ -53,7 +54,7 @@ export default function Contact() {
 
                             <div className="flex flex-wrap justify-center gap-3 md:gap-4 max-w-[220px] md:max-w-none mx-auto">
                                 <a
-                                    href="mailto:gilangwasis2@gmail.com"
+                                    href={PROFILE.socials.email}
                                     className="flex items-center justify-center bg-white text-slate-900 w-12 h-12 md:w-14 md:h-14 rounded-full font-bold hover:bg-blue-50 transition-all active:scale-95 shadow-lg group-hover:shadow-white/20"
                                     title="Email"
                                 >
@@ -87,7 +88,7 @@ export default function Contact() {
                                     <Instagram className="w-6 h-6" />
                                 </a>
                                 <a
-                                    href="/Portfolio/files/CV_Gilang_Wasis.pdf"
+                                    href={PROFILE.cvLink}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center justify-center bg-slate-700 text-white w-12 h-12 md:w-14 md:h-14 rounded-full font-bold hover:bg-slate-600 transition-all active:scale-95 shadow-lg group-hover:shadow-white/20 ring-1 ring-white/10"
